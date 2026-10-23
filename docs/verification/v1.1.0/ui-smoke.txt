@@ -1,0 +1,3 @@
+Actual signed release installed and cold-launched on API30.
+Options menu opens advisory dialog with 10 independent switches, all enabled by default.
+Disabling the first switch leaves the other9 enabled and persists only MISSING_COMICINFO in disabledWarnings.

@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite name="io.github.ehbridge.ConversionTest" tests="5" skipped="0" failures="0" errors="0" timestamp="2026-10-23T04:47:06.902Z" hostname="826f6acf4d51" time="0.645">
+<testsuite name="com.hycnyl.ehbridge.ConversionTest" tests="5" skipped="0" failures="0" errors="0" timestamp="2026-10-23T04:47:06.902Z" hostname="826f6acf4d51" time="0.645">
   <properties/>
-  <testcase name="T1_missingPagesPackPreservesNamesBytesAndXml" classname="io.github.ehbridge.ConversionTest" time="0.224"/>
-  <testcase name="T2_minimalSpiderInfoTokenFallbackAndRealCbor" classname="io.github.ehbridge.ConversionTest" time="0.328"/>
-  <testcase name="T3_sameFormatCopiesAllBytesAndNestedDirectories" classname="io.github.ehbridge.ConversionTest" time="0.043"/>
-  <testcase name="T4_mixedRootClassifiesAndExplainsEachInvalidItem" classname="io.github.ehbridge.ConversionTest" time="0.021"/>
-  <testcase name="T5_zipSafetyConflictsWriteFailureCancellationAndIsolation" classname="io.github.ehbridge.ConversionTest" time="0.022"/>
+  <testcase name="T1_missingPagesPackPreservesNamesBytesAndXml" classname="com.hycnyl.ehbridge.ConversionTest" time="0.224"/>
+  <testcase name="T2_minimalSpiderInfoTokenFallbackAndRealCbor" classname="com.hycnyl.ehbridge.ConversionTest" time="0.328"/>
+  <testcase name="T3_sameFormatCopiesAllBytesAndNestedDirectories" classname="com.hycnyl.ehbridge.ConversionTest" time="0.043"/>
+  <testcase name="T4_mixedRootClassifiesAndExplainsEachInvalidItem" classname="com.hycnyl.ehbridge.ConversionTest" time="0.021"/>
+  <testcase name="T5_zipSafetyConflictsWriteFailureCancellationAndIsolation" classname="com.hycnyl.ehbridge.ConversionTest" time="0.022"/>
   <system-out><![CDATA[]]></system-out>
   <system-err><![CDATA[]]></system-err>
 </testsuite>

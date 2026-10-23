@@ -1,0 +1,17 @@
+Verifies
+Verified using v1 scheme (JAR signing): false
+Verified using v2 scheme (APK Signature Scheme v2): true
+Verified using v3 scheme (APK Signature Scheme v3): false
+Verified using v3.1 scheme (APK Signature Scheme v3.1): false
+Verified using v4 scheme (APK Signature Scheme v4): false
+Verified for SourceStamp: false
+Number of signers: 1
+Signer #1 certificate DN: CN=EhBridge, OU=Local Tools, O=EhBridge
+Signer #1 certificate SHA-256 digest: bee73970eb426044f5a72eee1cb932b975d00d64630c1d5ef2aaa3e9a484fcf8
+Signer #1 certificate SHA-1 digest: 23d8e7c5534225eebf86373cb31f46f8f525f793
+Signer #1 certificate MD5 digest: 20ad804ba3293f7d1b91cb250c09710d
+Signer #1 key algorithm: RSA
+Signer #1 key size (bits): 3072
+Signer #1 public key SHA-256 digest: 2c3d1c1489d0e1949ffa9aba0b314733dbb032450f62c0dd4cfee30a37342e3e
+Signer #1 public key SHA-1 digest: c5cb91eeee705b6e4403727ab45cb3ade7c2fccc
+Signer #1 public key MD5 digest: 13c518016b0ba5c8c91501d0a9562dc7

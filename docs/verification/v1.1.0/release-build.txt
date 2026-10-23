@@ -1,0 +1,2 @@
+Tasks: assembleDebug, assembleDebugAndroidTest, assembleRelease, lintRelease (offline cached dependencies).
+BUILD SUCCESSFUL in 3m 20s; no lint errors.

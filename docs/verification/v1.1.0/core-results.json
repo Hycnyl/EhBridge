@@ -1,0 +1,18 @@
+[
+  {
+    "suite": "com.hycnyl.ehbridge.ConversionTest",
+    "tests": 5,
+    "failures": 0,
+    "errors": 0,
+    "seconds": 0.364,
+    "notes": ""
+  },
+  {
+    "suite": "com.hycnyl.ehbridge.V110SampleTest",
+    "tests": 2,
+    "failures": 0,
+    "errors": 0,
+    "seconds": 0.537,
+    "notes": "V110: absent outer/inner XML and cover are nonblocking; folder-derived escaped XML and null-token SpiderInfo generated; loose layout also packs\nV110: uploaded CBZ accepted for COPY and UNPACK; 43-page byte-preserving round trip; optional outer XML/cover repaired from inner XML; source unchanged"
+  }
+]

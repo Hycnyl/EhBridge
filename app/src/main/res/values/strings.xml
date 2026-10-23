@@ -11,7 +11,7 @@
     <string name="light">Light</string>
     <string name="dark">Dark</string>
     <string name="help">Help &amp; compatibility</string>
-    <string name="show_warnings">Show advisory warnings</string>
+    <string name="show_warnings">Advisory warnings</string>
     <string name="export_report">Export report</string>
     <string name="input_folder">Input folder</string>
     <string name="output_folder">Output folder</string>
@@ -24,9 +24,9 @@
     <string name="step_target">2  Target layout</string>
     <string name="target_a">A · Loose images</string>
     <string name="target_b">B · CBZ archive</string>
-    <string name="loose_description">Pages + .ehviewer + cover + XML</string>
-    <string name="cbz_description">CBZ + original cover + XML</string>
-    <string name="workflow_note">Same layout: copy the whole gallery. Other layout: convert. Missing pages are allowed.</string>
+    <string name="loose_description">Pages + .ehviewer · optional cover/XML</string>
+    <string name="cbz_description">CBZ · optional cover and XML</string>
+    <string name="workflow_note">Same layout: copy the gallery. Other layout: convert. Missing XML is repaired in the output; missing pages are allowed.</string>
     <string name="scan">Scan</string>
     <string name="rescan">Scan again</string>
     <string name="start">Start batch</string>
@@ -47,8 +47,8 @@
     <string name="gallery_progress">Galleries: %1$d / %2$d</string>
     <string name="file_progress">Pages processed: %1$d / %2$d</string>
     <string name="copy_progress">Files copied: %1$d</string>
-    <string name="count_a">A · %1$d</string>
-    <string name="count_b">B · %1$d</string>
+    <string name="count_a">Loose · %1$d</string>
+    <string name="count_b">CBZ · %1$d</string>
     <string name="count_invalid">Invalid · %1$d</string>
     <string name="copy">Copy</string>
     <string name="pack">A → B</string>
@@ -69,7 +69,7 @@
     <string name="close">Close</string>
     <string name="planned_action">Planned action: %1$s</string>
     <string name="result">Result: %1$s</string>
-    <string name="help_content">EhBridge processes only first-level gallery folders named GID-title.\n\nA: .ehviewer, numeric page files (at least 8 digits), one thumb/ thumb.* cover and ComicInfo.xml.\n\nB: GID.cbz, one original cover and external ComicInfo.xml. The ZIP root must contain page files and ComicInfo.xml.\n\nPage gaps and arbitrary extensions are allowed. Images are never decoded or recompressed. The original input is read only. Existing output folders are skipped.\n\nB → A writes real CBOR SpiderInfo. Missing gallery tokens do not stop conversion, but EhViewer may be unable to restore its download list or resume online downloads. Reading position and page tokens cannot be recovered.\n\nTarget EhViewer binary compatibility still requires a real .ehviewer sample and device check; the supplied decoded JSON only confirms field semantics.\n\nA visible foreground task keeps processing when the screen is off. Android may stop a task after its background time limit. Cancel or interrupted outputs are cleaned when possible; a .partial folder or .ehbridge-incomplete marker identifies unfinished output.\n\nReports contain relative gallery/file names and status, never gallery tokens, XML contents or tree URIs.</string>
+    <string name="help_content">EhBridge processes first-level gallery folders named GID-title.\n\nA: .ehviewer and numeric page files (at least 8 digits).\n\nB: GID.cbz containing page files at the ZIP root. Internal ComicInfo.xml is optional.\n\nComicInfo.xml and thumb / thumb.* are optional. Missing files produce advisory warnings. Missing XML is restored from the archive when available, or generated from the folder title and page count. Missing thumbnails remain absent. Repairs are written only to the output.\n\nUse All, Loose, CBZ and Invalid to filter the overview. Swipe quickly to reveal the scroll thumb, then drag it to jump through a long list. Advisory warning switches control visibility in the list and details; reports always contain all warnings.\n\nPage gaps and arbitrary extensions are allowed. Images are never decoded or recompressed. The original input is read only. Existing output folders are skipped.\n\nB → A writes CBOR SpiderInfo. Missing gallery tokens do not stop conversion, but EhViewer download-list recovery or online resume may be limited. Reading position and page tokens cannot be recovered.\n\nA foreground task supports processing with the screen off. Android may stop a task after its background time limit. Cancelled or interrupted outputs are cleaned when possible; a .partial folder or .ehbridge-incomplete marker identifies unfinished output.\n\nReports contain relative gallery/file names and status, never gallery tokens, XML contents or tree URIs.</string>
     <string name="notification_channel">Gallery conversion</string>
     <string name="notification_title">EhBridge is processing galleries</string>
     <string name="report_title">EhBridge conversion report</string>
@@ -94,7 +94,24 @@
     <string name="issue_token_source_conflict">External and internal XML tokens differ. The external token takes priority.</string>
     <string name="issue_comicinfo_different">Internal and external ComicInfo.xml differ. The external XML is preserved.</string>
     <string name="issue_gallery_incomplete">Page gaps or fewer files than the expected page count. Existing pages are still processed.</string>
-    <string name="issue_source_state_not_transferred">CBZ cannot retain .ehviewer download state. Page files, cover and XML are preserved.</string>
+    <string name="issue_source_state_not_transferred">CBZ cannot retain .ehviewer download state. Existing page files, cover and XML are preserved.</string>
     <string name="issue_staging_cleanup_failed">An unfinished temporary output could not be removed. Remove this relative output folder manually after the task stops.</string>
     <string name="issue_xml_metadata_limited">External XML is invalid or too large for metadata extraction. Its original bytes are preserved; minimal SpiderInfo is used.</string>
+    <string name="count_all">All · %1$d</string>
+    <string name="no_filter_items">No galleries match this filter.</string>
+    <string name="fast_scroll">Quickly scroll galleries</string>
+    <string name="warning_settings_description">Choose which advisory warnings appear in the gallery list and details. Conversion behavior and exported reports are unchanged.</string>
+    <string name="warning_missing_comicinfo">Missing ComicInfo.xml</string>
+    <string name="warning_missing_cover">Missing thumbnail</string>
+    <string name="warning_metadata_repaired">ComicInfo.xml repaired</string>
+    <string name="warning_token_unavailable">Gallery token unavailable</string>
+    <string name="warning_token_conflict">Gallery token conflict</string>
+    <string name="warning_comicinfo_different">Different internal and external XML</string>
+    <string name="warning_incomplete">Missing pages</string>
+    <string name="warning_state_not_transferred">Download state cannot be transferred</string>
+    <string name="warning_cleanup_failed">Temporary output cleanup incomplete</string>
+    <string name="warning_xml_limited">Limited XML metadata</string>
+    <string name="issue_missing_comicinfo">ComicInfo.xml is missing. Available archive metadata or the gallery folder name will be used to repair it in the output.</string>
+    <string name="issue_missing_cover">No thumb / thumb.* thumbnail is present. The gallery can still be processed.</string>
+    <string name="issue_metadata_repaired">Missing ComicInfo.xml was restored from the archive or generated from the gallery folder name and page count.</string>
 </resources>

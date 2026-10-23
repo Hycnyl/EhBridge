@@ -11,7 +11,7 @@
     <string name="light">浅色</string>
     <string name="dark">深色</string>
     <string name="help">帮助与兼容性</string>
-    <string name="show_warnings">显示非阻断提示</string>
+    <string name="show_warnings">非阻断提示</string>
     <string name="export_report">导出报告</string>
     <string name="input_folder">输入目录</string>
     <string name="output_folder">输出目录</string>
@@ -24,9 +24,9 @@
     <string name="step_target">2  目标格式</string>
     <string name="target_a">A · 文件夹＋散图</string>
     <string name="target_b">B · 文件夹＋CBZ</string>
-    <string name="loose_description">页图 + .ehviewer + 封面 + XML</string>
-    <string name="cbz_description">CBZ + 原始封面 + XML</string>
-    <string name="workflow_note">同格式整目录复制，异格式转换；允许缺页。</string>
+    <string name="loose_description">页图 + .ehviewer；封面及 XML 可选</string>
+    <string name="cbz_description">CBZ；封面及 XML 可选</string>
+    <string name="workflow_note">同格式整目录复制，异格式转换；缺失 XML 在输出中修复，允许缺页。</string>
     <string name="scan">扫描</string>
     <string name="rescan">重新扫描</string>
     <string name="start">开始处理</string>
@@ -69,7 +69,7 @@
     <string name="close">关闭</string>
     <string name="planned_action">预期操作：%1$s</string>
     <string name="result">处理结果：%1$s</string>
-    <string name="help_content">EhBridge 仅处理输入目录下名为 GID-标题 的一级画廊文件夹。\n\nA：.ehviewer、至少 8 位数字命名的页文件、唯一 thumb / thumb.* 封面和 ComicInfo.xml。\n\nB：GID.cbz、原始封面和外部 ComicInfo.xml。ZIP 根级须含页文件及 ComicInfo.xml。\n\n允许缺页及任意页图后缀，不解码、不转码图片。输入只读，输出已有同名文件夹会跳过。\n\nB → A 生成真实 CBOR SpiderInfo。缺少画廊 token 仍可转换，但 EhViewer 下载列表恢复或联网续传可能受限；无法恢复阅读位置及单页 token。\n\n目标 EhViewer 的二进制兼容性仍需真实 .ehviewer 样本和实机核对，提供的解码 JSON 仅能确认字段语义。\n\n可见的前台任务支持熄屏处理；达到 Android 后台时长上限时可能被系统停止。取消或出错后会尽量清理输出；.partial 目录或 .ehbridge-incomplete 标识代表未完成输出。\n\n报告只包含相对画廊名、文件名及状态，不含画廊 token、XML 全文或目录 URI。</string>
+    <string name="help_content">EhBridge 仅处理输入目录下名为 GID-标题 的一级画廊文件夹。\n\nA：.ehviewer 和至少 8 位数字命名的页文件。\n\nB：GID.cbz，页文件位于 ZIP 根级；内部 ComicInfo.xml 可选。\n\nComicInfo.xml 与 thumb / thumb.* 封面均为可选文件。缺失时仅给出非阻断提示。XML 优先从 CBZ 内恢复，否则根据文件夹标题和页数生成；缺失缩略图则保持缺失。修复仅写入输出目录。\n\n点击「全部」「散图」「CBZ」「无效」可筛选画廊。快速滑动会显示右侧滑块，可拖动滑块快速定位长列表。非阻断提示开关仅控制列表及详情中的显示，报告始终保留全部提示。\n\n允许缺页及任意页图后缀，不解码、不转码图片。输入只读，输出已有同名文件夹会跳过。\n\nB → A 生成 CBOR SpiderInfo。缺少画廊 token 仍可转换，但 EhViewer 下载列表恢复或联网续传可能受限；无法恢复阅读位置及单页 token。\n\n前台任务支持熄屏处理；达到 Android 后台时长上限时可能被系统停止。取消或出错后会尽量清理输出；.partial 目录或 .ehbridge-incomplete 标识代表未完成输出。\n\n报告只包含相对画廊名、文件名及状态，不含画廊 token、XML 全文或目录 URI。</string>
     <string name="notification_channel">画廊转换</string>
     <string name="notification_title">EhBridge 正在处理画廊</string>
     <string name="report_title">EhBridge 转换报告</string>
@@ -94,7 +94,24 @@
     <string name="issue_token_source_conflict">内外 XML 的 token 不一致，已采用外部 XML 的 token。</string>
     <string name="issue_comicinfo_different">内外 ComicInfo.xml 内容不同，输出保留外部 XML 原始字节。</string>
     <string name="issue_gallery_incomplete">页号存在空缺，或实际文件少于元数据总页数；现有页文件仍正常处理。</string>
-    <string name="issue_source_state_not_transferred">CBZ 无法保留 .ehviewer 下载状态；页文件、封面和 XML 会保留。</string>
+    <string name="issue_source_state_not_transferred">CBZ 无法保留 .ehviewer 下载状态；现有页文件、封面和 XML 会保留。</string>
     <string name="issue_staging_cleanup_failed">未能清理临时输出；任务停止后可手动删除所列的相对输出目录。</string>
     <string name="issue_xml_metadata_limited">外部 XML 无法解析或超出元数据读取上限；原始字节保留，并使用最小 SpiderInfo。</string>
+    <string name="count_all">全部 · %1$d</string>
+    <string name="no_filter_items">没有符合此筛选条件的画廊。</string>
+    <string name="fast_scroll">快速滚动画廊列表</string>
+    <string name="warning_settings_description">分别控制画廊列表及详情中显示的提示。转换行为和导出报告不受影响。</string>
+    <string name="warning_missing_comicinfo">缺少 ComicInfo.xml</string>
+    <string name="warning_missing_cover">缺少缩略图</string>
+    <string name="warning_metadata_repaired">已修复 ComicInfo.xml</string>
+    <string name="warning_token_unavailable">无法获取画廊 token</string>
+    <string name="warning_token_conflict">画廊 token 不一致</string>
+    <string name="warning_comicinfo_different">内外 XML 内容不同</string>
+    <string name="warning_incomplete">缺页</string>
+    <string name="warning_state_not_transferred">无法转移下载状态</string>
+    <string name="warning_cleanup_failed">临时输出未完全清理</string>
+    <string name="warning_xml_limited">XML 元数据读取受限</string>
+    <string name="issue_missing_comicinfo">缺少 ComicInfo.xml；将在输出中尝试使用 CBZ 内元数据或画廊文件夹名进行修复。</string>
+    <string name="issue_missing_cover">缺少 thumb / thumb.* 缩略图；仍可正常处理画廊。</string>
+    <string name="issue_metadata_repaired">缺失的 ComicInfo.xml 已从 CBZ 中恢复，或根据画廊文件夹名称及页数生成。</string>
 </resources>

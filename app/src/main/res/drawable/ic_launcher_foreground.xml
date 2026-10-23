@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<vector xmlns:android="http://schemas.android.com/apk/res/android"
+    android:width="108dp" android:height="108dp"
+    android:viewportWidth="108" android:viewportHeight="108">
+    <!-- The folder and arrows stay inside the central 66dp adaptive safe zone. -->
+    <path android:fillColor="#285340"
+        android:pathData="M23,30 L42,30 L48,37 L83,37 L83,76 Q83,81 78,81 L28,81 Q23,81 23,76 Z" />
+    <path android:fillColor="#D8EBDC"
+        android:pathData="M32,63 L44,51 L44,58 L64,58 L64,51 L76,63 L64,75 L64,68 L44,68 L44,75 Z" />
+</vector>

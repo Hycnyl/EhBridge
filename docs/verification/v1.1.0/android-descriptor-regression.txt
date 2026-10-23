@@ -1,0 +1,29 @@
+INSTRUMENTATION_STATUS: class=com.hycnyl.ehbridge.V110NativeTest
+INSTRUMENTATION_STATUS: current=1
+INSTRUMENTATION_STATUS: id=AndroidJUnitRunner
+INSTRUMENTATION_STATUS: numtests=1
+INSTRUMENTATION_STATUS: stream=
+com.hycnyl.ehbridge.V110NativeTest:
+INSTRUMENTATION_STATUS: test=seekableDescriptorGrantAndRealSample
+INSTRUMENTATION_STATUS_CODE: 1
+INSTRUMENTATION_STATUS: stream=V110: legacy seekable-descriptor reopen failed: FileNotFoundException; fallback required
+
+INSTRUMENTATION_STATUS_CODE: 0
+INSTRUMENTATION_STATUS: stream=V110: SAF descriptor-grant scan COPY + UNPACK accepted; real 43-page CBZ extracted with CRC checks; SpiderInfo valid; no archive spool retained
+
+INSTRUMENTATION_STATUS_CODE: 0
+INSTRUMENTATION_STATUS: class=com.hycnyl.ehbridge.V110NativeTest
+INSTRUMENTATION_STATUS: current=1
+INSTRUMENTATION_STATUS: id=AndroidJUnitRunner
+INSTRUMENTATION_STATUS: numtests=1
+INSTRUMENTATION_STATUS: stream=.
+INSTRUMENTATION_STATUS: test=seekableDescriptorGrantAndRealSample
+INSTRUMENTATION_STATUS_CODE: 0
+INSTRUMENTATION_RESULT: stream=
+
+Time: 8.501
+
+OK (1 test)
+
+
+INSTRUMENTATION_CODE: -1
