@@ -10,7 +10,6 @@
     <string name="theme">外观</string>
     <string name="light">浅色</string>
     <string name="dark">深色</string>
-    <string name="help">帮助与兼容性</string>
     <string name="show_warnings">非阻断提示</string>
     <string name="export_report">导出报告</string>
     <string name="input_folder">输入目录</string>
@@ -24,7 +23,7 @@
     <string name="step_target">2  目标格式</string>
     <string name="target_a">A · 文件夹＋散图</string>
     <string name="target_b">B · 文件夹＋CBZ</string>
-    <string name="loose_description">页图 + .ehviewer；封面及 XML 可选</string>
+    <string name="loose_description">页图；.ehviewer、封面及 XML 均可选</string>
     <string name="cbz_description">CBZ；封面及 XML 可选</string>
     <string name="workflow_note">同格式整目录复制，异格式转换；缺失 XML 在输出中修复，允许缺页。</string>
     <string name="scan">扫描</string>
@@ -69,7 +68,6 @@
     <string name="close">关闭</string>
     <string name="planned_action">预期操作：%1$s</string>
     <string name="result">处理结果：%1$s</string>
-    <string name="help_content">EhBridge 仅处理输入目录下名为 GID-标题 的一级画廊文件夹。\n\nA：.ehviewer 和至少 8 位数字命名的页文件。\n\nB：GID.cbz，页文件位于 ZIP 根级；内部 ComicInfo.xml 可选。\n\nComicInfo.xml 与 thumb / thumb.* 封面均为可选文件。缺失时仅给出非阻断提示。XML 优先从 CBZ 内恢复，否则根据文件夹标题和页数生成；缺失缩略图则保持缺失。修复仅写入输出目录。\n\n点击「全部」「散图」「CBZ」「无效」可筛选画廊。快速滑动会显示右侧滑块，可拖动滑块快速定位长列表。非阻断提示开关仅控制列表及详情中的显示，报告始终保留全部提示。\n\n允许缺页及任意页图后缀，不解码、不转码图片。输入只读，输出已有同名文件夹会跳过。\n\nB → A 生成 CBOR SpiderInfo。缺少画廊 token 仍可转换，但 EhViewer 下载列表恢复或联网续传可能受限；无法恢复阅读位置及单页 token。\n\n前台任务支持熄屏处理；达到 Android 后台时长上限时可能被系统停止。取消或出错后会尽量清理输出；.partial 目录或 .ehbridge-incomplete 标识代表未完成输出。\n\n报告只包含相对画廊名、文件名及状态，不含画廊 token、XML 全文或目录 URI。</string>
     <string name="notification_channel">画廊转换</string>
     <string name="notification_title">EhBridge 正在处理画廊</string>
     <string name="report_title">EhBridge 转换报告</string>
@@ -114,4 +112,30 @@
     <string name="issue_missing_comicinfo">缺少 ComicInfo.xml；将在输出中尝试使用 CBZ 内元数据或画廊文件夹名进行修复。</string>
     <string name="issue_missing_cover">缺少 thumb / thumb.* 缩略图；仍可正常处理画廊。</string>
     <string name="issue_metadata_repaired">缺失的 ComicInfo.xml 已从 CBZ 中恢复，或根据画廊文件夹名称及页数生成。</string>
+    <string name="about">关于</string>
+    <string name="about_software">软件信息</string>
+    <string name="about_version">版本 %1$s</string>
+    <string name="about_summary">在本地转换 EhViewer 散图画廊与 CBZ 存档，保留页文件的原始字节。\nEnglish / 简体中文 · Android 8.0+</string>
+    <string name="about_package">包名：%1$s</string>
+    <string name="about_author">作者</string>
+    <string name="about_project">GitHub 项目</string>
+    <string name="about_open_link">在浏览器中打开</string>
+    <string name="about_link_unavailable">未找到可打开此链接的应用。</string>
+    <string name="guide_title">使用指南</string>
+    <string name="guide_folders_title">1. 选择输入与输出目录</string>
+    <string name="guide_folders">将各个 GID-标题 画廊文件夹直接放在输入目录下。输出目录应与输入目录独立，不能相同或互相包含。建议从同一存储提供程序中选择两个目录，以便检查目录关系。</string>
+    <string name="guide_scan_title">2. 选择目标格式并查看扫描结果</string>
+    <string name="guide_scan">选择散图或 CBZ，然后点击「扫描」。同格式复制，异格式转换。点击画廊条目可查看预期操作及错误原因。「全部／散图／CBZ／无效」仅筛选预览列表，批处理仍使用完整扫描计划。快速滑动可显示右侧滑块，拖动即可快速定位。</string>
+    <string name="guide_run_title">3. 开始处理与检查输出</string>
+    <string name="guide_run">确认预期操作后点击「开始处理」。已有同名输出目录会跳过，不覆盖、不合并，输入原文件保持不变。\n\n取消时保留已完成画廊，重新扫描可重试未完成项目。.partial 目录或 .ehbridge-incomplete 标识代表未完成输出，请在任务停止后再清理。任务支持熄屏处理，但达到 Android 后台时长上限时可能被系统停止。</string>
+    <string name="guide_formats_title">画廊文件夹结构</string>
+    <string name="guide_formats">A · 散图：至少一个数字页文件，例如 00000001.webp；.ehviewer 可选。\n\nB · CBZ：GID.cbz，数字页文件平铺在存档根级；内部 ComicInfo.xml 可选。\n\n页文件名至少使用 8 位数字，允许缺页及任意后缀。每个画廊应独立放在 GID-标题 文件夹中。</string>
+    <string name="guide_optional_title">可选文件与非阻断提示</string>
+    <string name="guide_optional">缺少 .ehviewer 不影响散图画廊复制或 A → B 转换。同格式复制不会补建此文件，CBZ 也不会保留其中的下载状态。\n\nComicInfo.xml 与 thumb / thumb.* 缩略图均可选。外部 XML 缺失时优先从 CBZ 恢复，否则根据文件夹标题及页数生成；已有 XML 保留原始字节。缺失缩略图保持缺失，所有修复仅写入输出目录。\n\n「非阻断提示」菜单可分别开关每类提示；只控制列表和详情中的显示，不改变转换行为，导出报告仍保留全部提示。</string>
+    <string name="guide_compatibility_title">EhViewer 兼容性</string>
+    <string name="guide_compatibility">B → A 会生成 CBOR SpiderInfo。缺少画廊 token 仍可转换，但 EhViewer 下载列表恢复或联网续传可能受限；无法恢复阅读位置及单页 token。图片不会被解码或重新转码。</string>
+    <string name="guide_privacy_title">本地处理与报告</string>
+    <string name="guide_privacy">转换在设备本地进行，关于页链接交由外部浏览器打开。导出报告只包含相对画廊名、文件名及状态，不含画廊 token、XML 全文或目录 URI。</string>
+    <string name="warning_missing_ehviewer">缺少 .ehviewer</string>
+    <string name="issue_missing_ehviewer">缺少 .ehviewer；页文件仍可正常复制或打包为 CBZ。同格式复制不会补建此文件。</string>
 </resources>

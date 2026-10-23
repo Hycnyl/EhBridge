@@ -10,7 +10,6 @@
     <string name="theme">Appearance</string>
     <string name="light">Light</string>
     <string name="dark">Dark</string>
-    <string name="help">Help &amp; compatibility</string>
     <string name="show_warnings">Advisory warnings</string>
     <string name="export_report">Export report</string>
     <string name="input_folder">Input folder</string>
@@ -24,7 +23,7 @@
     <string name="step_target">2  Target layout</string>
     <string name="target_a">A · Loose images</string>
     <string name="target_b">B · CBZ archive</string>
-    <string name="loose_description">Pages + .ehviewer · optional cover/XML</string>
+    <string name="loose_description">Pages · .ehviewer, cover and XML optional</string>
     <string name="cbz_description">CBZ · optional cover and XML</string>
     <string name="workflow_note">Same layout: copy the gallery. Other layout: convert. Missing XML is repaired in the output; missing pages are allowed.</string>
     <string name="scan">Scan</string>
@@ -69,7 +68,6 @@
     <string name="close">Close</string>
     <string name="planned_action">Planned action: %1$s</string>
     <string name="result">Result: %1$s</string>
-    <string name="help_content">EhBridge processes first-level gallery folders named GID-title.\n\nA: .ehviewer and numeric page files (at least 8 digits).\n\nB: GID.cbz containing page files at the ZIP root. Internal ComicInfo.xml is optional.\n\nComicInfo.xml and thumb / thumb.* are optional. Missing files produce advisory warnings. Missing XML is restored from the archive when available, or generated from the folder title and page count. Missing thumbnails remain absent. Repairs are written only to the output.\n\nUse All, Loose, CBZ and Invalid to filter the overview. Swipe quickly to reveal the scroll thumb, then drag it to jump through a long list. Advisory warning switches control visibility in the list and details; reports always contain all warnings.\n\nPage gaps and arbitrary extensions are allowed. Images are never decoded or recompressed. The original input is read only. Existing output folders are skipped.\n\nB → A writes CBOR SpiderInfo. Missing gallery tokens do not stop conversion, but EhViewer download-list recovery or online resume may be limited. Reading position and page tokens cannot be recovered.\n\nA foreground task supports processing with the screen off. Android may stop a task after its background time limit. Cancelled or interrupted outputs are cleaned when possible; a .partial folder or .ehbridge-incomplete marker identifies unfinished output.\n\nReports contain relative gallery/file names and status, never gallery tokens, XML contents or tree URIs.</string>
     <string name="notification_channel">Gallery conversion</string>
     <string name="notification_title">EhBridge is processing galleries</string>
     <string name="report_title">EhBridge conversion report</string>
@@ -114,4 +112,30 @@
     <string name="issue_missing_comicinfo">ComicInfo.xml is missing. Available archive metadata or the gallery folder name will be used to repair it in the output.</string>
     <string name="issue_missing_cover">No thumb / thumb.* thumbnail is present. The gallery can still be processed.</string>
     <string name="issue_metadata_repaired">Missing ComicInfo.xml was restored from the archive or generated from the gallery folder name and page count.</string>
+    <string name="about">About</string>
+    <string name="about_software">Software</string>
+    <string name="about_version">Version %1$s</string>
+    <string name="about_summary">Convert EhViewer loose-page galleries and CBZ archives locally, preserving original page bytes.\nEnglish / 简体中文 · Android 8.0+</string>
+    <string name="about_package">Package: %1$s</string>
+    <string name="about_author">Author</string>
+    <string name="about_project">Project on GitHub</string>
+    <string name="about_open_link">Open in browser</string>
+    <string name="about_link_unavailable">No app is available to open this link.</string>
+    <string name="guide_title">Usage guide</string>
+    <string name="guide_folders_title">1. Choose input and output folders</string>
+    <string name="guide_folders">Place each GID-title gallery folder directly inside the input folder. Choose a separate output folder that does not contain, or sit inside, the input. Use the same storage provider for both selections so folder relationships can be checked.</string>
+    <string name="guide_scan_title">2. Select a target and review the scan</string>
+    <string name="guide_scan">Choose Loose or CBZ, then tap Scan. The same layout is copied; a different layout is converted. Open any gallery row to inspect its plan or errors. All / Loose / CBZ / Invalid filter the preview only; the batch uses the whole scan plan. Swipe quickly to reveal the draggable scroll thumb.</string>
+    <string name="guide_run_title">3. Start and finish the batch</string>
+    <string name="guide_run">Tap Start batch after reviewing the plan. Existing output folders are skipped without merging or overwriting. Inputs stay unchanged.\n\nCompleted galleries are kept if you cancel. Scan again to retry unfinished items. A .partial folder or .ehbridge-incomplete marker means an output is unfinished; remove it only after the task stops. Processing can continue with the screen off, but Android may stop it at its background time limit.</string>
+    <string name="guide_formats_title">Gallery folder layouts</string>
+    <string name="guide_formats">A · Loose: at least one numeric page file such as 00000001.webp. The .ehviewer file is optional.\n\nB · CBZ: GID.cbz, with numeric page files at the archive root. Internal ComicInfo.xml is optional.\n\nPage names need at least 8 digits. Page gaps and arbitrary extensions are allowed. Keep each gallery in its own GID-title folder.</string>
+    <string name="guide_optional_title">Optional files and advisory warnings</string>
+    <string name="guide_optional">Missing .ehviewer does not block loose-gallery copying or A → B conversion. A same-layout copy does not generate this file; CBZ does not retain its download state.\n\nComicInfo.xml and thumb / thumb.* are optional. Missing outer XML is restored from the CBZ when available, or generated from the folder title and page count. Existing XML bytes are preserved. Missing thumbnails remain absent; repairs are written only to the output.\n\nThe advisory-warning menu has a switch for each warning type. These switches affect list and detail visibility only; conversion and exported reports are unchanged.</string>
+    <string name="guide_compatibility_title">EhViewer compatibility</string>
+    <string name="guide_compatibility">B → A generates CBOR SpiderInfo. A missing gallery token does not stop conversion, but EhViewer download-list recovery or online resume may be limited. Reading position and per-page tokens cannot be recovered. Images are never decoded or recompressed.</string>
+    <string name="guide_privacy_title">Local processing and reports</string>
+    <string name="guide_privacy">Conversion stays on your device. About-page links open in an external browser. Exported reports contain relative gallery names, file names and status; they exclude gallery tokens, full XML and folder URIs.</string>
+    <string name="warning_missing_ehviewer">Missing .ehviewer</string>
+    <string name="issue_missing_ehviewer">The .ehviewer file is missing. Page files can still be copied or packed into CBZ; a same-layout copy does not generate this file.</string>
 </resources>

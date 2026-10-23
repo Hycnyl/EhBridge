@@ -1,0 +1,16 @@
+[
+  {
+    "suite": "com.hycnyl.ehbridge.ConversionTest",
+    "tests": 5,
+    "failures": 0,
+    "errors": 0,
+    "seconds": 0.499
+  },
+  {
+    "suite": "com.hycnyl.ehbridge.MissingEhviewer111Test",
+    "tests": 2,
+    "failures": 0,
+    "errors": 0,
+    "seconds": 0.009
+  }
+]

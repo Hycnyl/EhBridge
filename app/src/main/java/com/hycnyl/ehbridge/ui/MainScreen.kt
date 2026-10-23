@@ -77,7 +77,7 @@ fun MainScreen(state: UiState, repository: BridgeRepository, onPick: (Boolean) -
                             DropdownMenuItem(text = { Text(stringResource(R.string.theme)) }, leadingIcon = { Icon(Icons.Outlined.Palette, null) }, onClick = { menu = false; dialog = "theme" })
                             DropdownMenuItem(text = { Text(stringResource(R.string.show_warnings)) }, leadingIcon = { Icon(Icons.Outlined.NotificationsNone, null) }, onClick = { menu = false; dialog = "warnings" })
                             DropdownMenuItem(text = { Text(stringResource(R.string.export_report)) }, leadingIcon = { Icon(Icons.Outlined.SaveAlt, null) }, enabled = state.plans.isNotEmpty(), onClick = { menu = false; onExport() })
-                            DropdownMenuItem(text = { Text(stringResource(R.string.help)) }, leadingIcon = { Icon(Icons.Outlined.Info, null) }, onClick = { menu = false; dialog = "help" })
+                            DropdownMenuItem(text = { Text(stringResource(R.string.about)) }, leadingIcon = { Icon(Icons.Outlined.Info, null) }, onClick = { menu = false; dialog = "about" })
                         }
                     }
                 },
@@ -122,7 +122,7 @@ fun MainScreen(state: UiState, repository: BridgeRepository, onPick: (Boolean) -
         "language" -> ChoiceDialog(stringResource(R.string.language), listOf("" to stringResource(R.string.system_default), "zh-CN" to stringResource(R.string.chinese), "en" to stringResource(R.string.english)), state.language, onDismiss = { dialog = null }) { dialog = null; onLanguage(it) }
         "theme" -> ChoiceDialog(stringResource(R.string.theme), listOf(ThemeMode.SYSTEM to stringResource(R.string.system_default), ThemeMode.LIGHT to stringResource(R.string.light), ThemeMode.DARK to stringResource(R.string.dark)), state.theme, onDismiss = { dialog = null }) { repository.theme(it); dialog = null }
         "warnings" -> WarningDialog(state.enabledWarnings, repository::warnings) { dialog = null }
-        "help" -> TextDialog(stringResource(R.string.help), onDismiss = { dialog = null }) { Text(stringResource(R.string.help_content), style = MaterialTheme.typography.bodyMedium) }
+        "about" -> TextDialog(stringResource(R.string.about), onDismiss = { dialog = null }) { AboutContent() }
     }
     selected?.let { plan ->
         val result = state.results[plan.source.id]
@@ -397,6 +397,7 @@ private fun WarningDialog(enabled: Set<Code>, onChange: (Code, Boolean) -> Unit,
 }
 
 private fun warningTitle(code: Code): Int = when (code) {
+    Code.MISSING_EHVIEWER -> R.string.warning_missing_ehviewer
     Code.MISSING_COMICINFO -> R.string.warning_missing_comicinfo
     Code.MISSING_COVER -> R.string.warning_missing_cover
     Code.METADATA_REPAIRED -> R.string.warning_metadata_repaired

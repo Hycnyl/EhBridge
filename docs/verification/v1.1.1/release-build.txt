@@ -1,0 +1,4 @@
+testDebugUnitTest + assembleRelease + lintRelease, offline cached dependencies.
+BUILD SUCCESSFUL in 3m28s.
+Single universal APK, versionName1.1.1/versionCode3, unchanged package and release certificate.
+ZIP and native ELF LOAD alignments verified for16KiB pages.

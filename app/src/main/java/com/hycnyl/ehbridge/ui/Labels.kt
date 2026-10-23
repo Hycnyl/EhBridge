@@ -33,6 +33,7 @@ fun issueLabel(code: Code): Int = when (code) {
     Code.MISSING_COMICINFO -> R.string.issue_missing_comicinfo
     Code.MISSING_COVER -> R.string.issue_missing_cover
     Code.METADATA_REPAIRED -> R.string.issue_metadata_repaired
+    Code.MISSING_EHVIEWER -> R.string.issue_missing_ehviewer
 }
 fun operationLabel(operation: Operation) = when (operation) {
     Operation.COPY -> R.string.copy

@@ -247,7 +247,7 @@ class T6AdaptiveAndBatchTest {
             val pssDuring = Debug.getPss()
             note("foreground batch running; Activity recreated and window resized")
             click("Options", description = true)
-            click("Help & compatibility")
+            click("About")
             click("Close")
             shell("input keyevent 26")
             waitUntil(600_000, "screen-off foreground batch") { repo.state.value.phase != Phase.RUNNING }

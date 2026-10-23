@@ -48,7 +48,6 @@ class GalleryScanner(private val store: Store) {
                 catch (_: java.util.zip.ZipException) { throw BridgeFailure(Issue(Code.ARCHIVE_UNSAFE, archive.name)) }
                 catch (_: Exception) { throw BridgeFailure(Issue(Code.READ_WRITE_FAILURE, archive.name)) }
             } else {
-                if (spider == null) throw BridgeFailure(Issue(Code.MISSING_REQUIRED_FILE, ".ehviewer / $gid.cbz"))
                 if (pages.isEmpty()) throw BridgeFailure(Issue(Code.NO_PAGE_FILES))
                 layout = Layout.LOOSE
                 actualPages = pages
@@ -57,7 +56,7 @@ class GalleryScanner(private val store: Store) {
             if (layout != target) {
                 val business = buildSet {
                     xml?.let { add(it.name) }; cover?.let { add(it.name) }
-                    if (archive != null) add(archive.name) else { add(".ehviewer"); addAll(pages.map { it.name }) }
+                    if (archive != null) add(archive.name) else { spider?.let { add(it.name) }; addAll(pages.map { it.name }) }
                 }
                 children.firstOrNull { it.name !in business && !(!it.directory && (Names.junk(it.name) || it.size == 0L)) }?.let {
                     throw BridgeFailure(Issue(Code.UNMAPPED_EXTRA_DATA, it.name))
@@ -70,7 +69,8 @@ class GalleryScanner(private val store: Store) {
             val warnings = mutableListOf<Issue>()
             if (xml == null) warnings.add(Issue(Code.MISSING_COMICINFO, "ComicInfo.xml"))
             if (cover == null) warnings.add(Issue(Code.MISSING_COVER, "thumb / thumb.*"))
-            if (layout != target && layout == Layout.LOOSE) warnings.add(Issue(Code.SOURCE_STATE_NOT_TRANSFERRED, ".ehviewer"))
+            if (layout == Layout.LOOSE && spider == null) warnings.add(Issue(Code.MISSING_EHVIEWER, ".ehviewer"))
+            if (layout != target && layout == Layout.LOOSE && spider != null) warnings.add(Issue(Code.SOURCE_STATE_NOT_TRANSFERRED, ".ehviewer"))
             if (actualPages.map { it.number }.distinct().size < actualPages.maxOf { it.number }) warnings.add(Issue(Code.GALLERY_INCOMPLETE))
             Plan(folder, gid, layout, if (layout == target) Operation.COPY else if (target == Layout.CBZ) Operation.PACK else Operation.UNPACK,
                 actualPages, xml, cover, archive, warnings = warnings)
