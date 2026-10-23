@@ -1,0 +1,13 @@
+Success
+Success
+Performing Streamed Install
+Success
+Starting: Intent { cmp=io.github.ehbridge/.ui.MainActivity }
+Status: ok
+LaunchState: COLD
+Activity: io.github.ehbridge/.ui.MainActivity
+TotalTime: 4996
+WaitTime: 5209
+Complete
+UI hierchary dumped to: /sdcard/release-ui.xml
+/sdcard/release-ui.xml: 1 file pulled, 0 skipped. 2.0 MB/s (18320 bytes in 0.009s)

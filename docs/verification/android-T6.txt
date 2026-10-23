@@ -1,0 +1,47 @@
+INSTRUMENTATION_STATUS: class=io.github.ehbridge.T6AdaptiveAndBatchTest
+INSTRUMENTATION_STATUS: current=1
+INSTRUMENTATION_STATUS: id=AndroidJUnitRunner
+INSTRUMENTATION_STATUS: numtests=1
+INSTRUMENTATION_STATUS: stream=
+io.github.ehbridge.T6AdaptiveAndBatchTest:
+INSTRUMENTATION_STATUS: test=T6_windowsStateForegroundTaskAnd200Galleries
+INSTRUMENTATION_STATUS_CODE: 1
+INSTRUMENTATION_STATUS: stream=T6: phone window and controls confirmed
+
+INSTRUMENTATION_STATUS_CODE: 0
+INSTRUMENTATION_STATUS: stream=T6: medium and wide windows confirmed; two-column geometry verified
+
+INSTRUMENTATION_STATUS_CODE: 0
+INSTRUMENTATION_STATUS: stream=T6: phone, medium, tablet, Chinese/English and font scale checks passed
+
+INSTRUMENTATION_STATUS_CODE: 0
+INSTRUMENTATION_STATUS: stream=T6: 200 galleries / 20000 page files ready
+
+INSTRUMENTATION_STATUS_CODE: 0
+INSTRUMENTATION_STATUS: stream=T6: SAF scan completed in 146042 ms
+
+INSTRUMENTATION_STATUS_CODE: 0
+INSTRUMENTATION_STATUS: stream=T6: foreground batch running; Activity recreated and window resized
+
+INSTRUMENTATION_STATUS_CODE: 0
+INSTRUMENTATION_STATUS: stream=T6: foreground batch completed in 640598 ms
+
+INSTRUMENTATION_STATUS_CODE: 0
+INSTRUMENTATION_STATUS: stream=T6: SAF B to A round trip and persisted CBOR verification passed
+
+INSTRUMENTATION_STATUS_CODE: 0
+INSTRUMENTATION_STATUS: class=io.github.ehbridge.T6AdaptiveAndBatchTest
+INSTRUMENTATION_STATUS: current=1
+INSTRUMENTATION_STATUS: id=AndroidJUnitRunner
+INSTRUMENTATION_STATUS: numtests=1
+INSTRUMENTATION_STATUS: stream=.
+INSTRUMENTATION_STATUS: test=T6_windowsStateForegroundTaskAnd200Galleries
+INSTRUMENTATION_STATUS_CODE: 0
+INSTRUMENTATION_RESULT: stream=
+
+Time: 979.294
+
+OK (1 test)
+
+
+INSTRUMENTATION_CODE: -1

@@ -1,0 +1,6 @@
+UI hierchary dumped to: /sdcard/release-menu.xml
+/sdcard/release-menu.xml: 1 file pulled, 0 skipped. 0.6 MB/s (5012 bytes in 0.008s)
+UI hierchary dumped to: /sdcard/release-language.xml
+/sdcard/release-language.xml: 1 file pulled, 0 skipped. 0.1 MB/s (6971 bytes in 0.046s)
+UI hierchary dumped to: /sdcard/release-zh.xml
+/sdcard/release-zh.xml: 1 file pulled, 0 skipped. 2.9 MB/s (18313 bytes in 0.006s)

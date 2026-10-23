@@ -1,0 +1,18 @@
+.gradle/
+.kotlin/
+**/build/
+local.properties
+signing.properties
+*.jks
+*.keystore
+*.p12
+release-signing/
+.idea/
+
+# Private input and local delivery artifacts
+ehviewer_decoded.json
+backups/
+deliverables/
+*.apk
+*.aab
+*-signing-backup.zip

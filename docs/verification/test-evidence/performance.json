@@ -1,0 +1,10 @@
+{
+              "androidApi":30,"emulator":"x86_64, software TCG, 2 cores, 2048 MB",
+              "galleries":200,"pageFiles":20000,"invalidRootItems":1,
+              "scanMs":146042,"batchMs":640598,
+              "pssBeforeKiB":184921,"pssDuringKiB":193111,"pssAfterKiB":192378,
+              "converted":200,"skipped":1,"failed":0,"batchStarts":1,
+              "remainingPartialFolders":0,"safRoundTrip":true,
+              "rotationDuringBatch":true,"screenOffDuringBatch":true,
+              "phoneWidthDp":420,"mediumWidthDp":740,"tabletWidthDp":1280,"fontScaleChecked":2.0
+            }

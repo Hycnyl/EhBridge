@@ -1,0 +1,26 @@
+INSTRUMENTATION_STATUS: class=io.github.ehbridge.T6AdaptiveAndBatchTest
+INSTRUMENTATION_STATUS: current=1
+INSTRUMENTATION_STATUS: id=AndroidJUnitRunner
+INSTRUMENTATION_STATUS: numtests=1
+INSTRUMENTATION_STATUS: stream=
+io.github.ehbridge.T6AdaptiveAndBatchTest:
+INSTRUMENTATION_STATUS: test=T6_windowsStateForegroundTaskAnd200Galleries
+INSTRUMENTATION_STATUS_CODE: 1
+INSTRUMENTATION_STATUS: stream=T6: current storage: aliases rejected, colon suffix preserved, SAF pack/unpack/CBOR and recursive copy/no-overwrite passed
+
+INSTRUMENTATION_STATUS_CODE: 0
+INSTRUMENTATION_STATUS: class=io.github.ehbridge.T6AdaptiveAndBatchTest
+INSTRUMENTATION_STATUS: current=1
+INSTRUMENTATION_STATUS: id=AndroidJUnitRunner
+INSTRUMENTATION_STATUS: numtests=1
+INSTRUMENTATION_STATUS: stream=.
+INSTRUMENTATION_STATUS: test=T6_windowsStateForegroundTaskAnd200Galleries
+INSTRUMENTATION_STATUS_CODE: 0
+INSTRUMENTATION_RESULT: stream=
+
+Time: 29.955
+
+OK (1 test)
+
+
+INSTRUMENTATION_CODE: -1
